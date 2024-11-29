@@ -1,9 +1,19 @@
 <!--
 body {
-    background-color: #fff;
-    color: #000;
+    background-color: #202330;
+    color: #FFF;
     margin: 0px;
     padding: 0px;
-    font-family: "JetBrainsMono-Light"
+    font-family: "JetBrainsMono-Light";
+}
+
+h2 {
+    color: #af76b8;
+    font-family: "JetBrainsMono-LightItalic";
+}
+
+.comment {
+    color: #4c5991;
+    font-family: "JetBrainsMono-LightItalic";
 }
 -->
