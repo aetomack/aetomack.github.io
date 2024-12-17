@@ -3,6 +3,7 @@
 * Structures: #E578A1
 * Comments: #9EAFF4
 * Classes: #8BECF3
+* Method: #56ED84
 */
 
 <!--
@@ -11,21 +12,25 @@ body {
     color: #FFF;
     margin: 0px;
     padding: 0px;
+    font-weight: 500;
     font-family: "courier new", verdana, sans-serif;
 }
 
 .structure {
-    color: #E578A1;
+    color: #ff7daf;
+    font-weight: 500;
     font-family: "courier new", verdana, sans-serif;
 }
 
 .comment {
     color: #9EAFF4;
+    font-weight: 500;
     font-family: "courier new", verdana, sans-serif;
 }
 
 .class {
-    color: #8BECF3;
+    color: #75f0f9;
+    font-weight: 500;
     font-family: "courier new", verdana, sans-serif;
 }
 
