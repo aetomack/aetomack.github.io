@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Alex Tomack - Vanderbilt '25 | Software and Data</title>
+        <title>alex tomack - software and data</title>
 		<link href="image/style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div class="content">
-            <font-face = "JetBrainsMono-LightItalic"></font-face>
-            <h2>~/Information</h2>
-            <span class="comment">Always checking out new stuff</span>
-            <p>Body font test</p>
-        </div>
-    </body>
-</html>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const line = document.querySelector('.line-1');
+            
+                // Get the natural width of the text
+                const textWidth = line.scrollWidth + "px";
+            
+                // Get the number of characters in the text
+                const textLength = line.textContent.length;
+            
+                // Calculate animation duration (e.g., 0.1s per character)
+                const duration = textLength * 0.1; // Adjust timing as needed
+            
+                // Apply dynamic CSS variables for steps, duration, and text width
+                line.style.setProperty('--steps', textLength);
+                line.style.setProperty('--duration', `${duration}s`);
+                line.style.setProperty('--text-width', textWidth);
+            
+                // Add the animation class
+                line.classList.add('anim-typewriter');
+            });
+            
+        </script>
+        <!--Top of page. Can I make my site look like an IDE?-->
+        <span class="comment">/*@author Alex Tomack, copywrite @2024 - All rights reserved*/</span>
+        <br>
+        <h2 class="class">
+            <span class="structure">class</span>
+            Information
+            <span> : </span>
+            <span class = "structure">public </span>
+            Alex
+            <span class = ""> {</span>
+        </h2><br>
+     </body>
+</html>>

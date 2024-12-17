@@ -1,19 +1,56 @@
+/*
+* Background: #282A36
+* Structures: #E578A1
+* Comments: #9EAFF4
+* Classes: #8BECF3
+*/
+
 <!--
 body {
-    background-color: #202330;
+    background-color: #282A36;
     color: #FFF;
     margin: 0px;
     padding: 0px;
-    font-family: "JetBrainsMono-Light";
+    font-family: "courier new", verdana, sans-serif;
 }
 
-h2 {
-    color: #af76b8;
-    font-family: "JetBrainsMono-LightItalic";
+.structure {
+    color: #E578A1;
+    font-family: "courier new", verdana, sans-serif;
 }
 
 .comment {
-    color: #4c5991;
-    font-family: "JetBrainsMono-LightItalic";
+    color: #9EAFF4;
+    font-family: "courier new", verdana, sans-serif;
+}
+
+.class {
+    color: #8BECF3;
+    font-family: "courier new", verdana, sans-serif;
+}
+
+.line-1 {
+    position: relative;
+    width: 0; /* Start at zero width for animation */
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block; /* Ensure the width adjusts dynamically to content */
+}
+
+.anim-typewriter {
+    animation: typewriter var(--duration) steps(var(--steps)) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from { width: 0; } /* Start at 0 width */
+    to { width: var(--text-width); } /* Use dynamically calculated text width */
+}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: rgba(255, 255, 255, 0.75); }
+    to { border-right-color: transparent; }
 }
 -->
