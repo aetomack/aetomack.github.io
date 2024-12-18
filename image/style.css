@@ -9,6 +9,11 @@ body {
     font-family: "courier new", verdana, sans-serif;
 }
 
+.white {
+    color: #FFF;
+    font-weight: 500;
+    font-family: "cournier new", verdana, sans-serif;
+}
 .structure {
     color: #ff7daf;
     font-weight: 500;
@@ -35,7 +40,6 @@ body {
 .private {
     color:#ffbb00;
     font-weight: 500;
-    padding-left: 40px;
     font-family: "courier new", verdana, sans-serif;
 }
 .method {
@@ -44,8 +48,6 @@ body {
     padding-left: 40px;
     font-family: "courier new", verdana, sans-serif;
 };
-
-
 
 .line-1 {
     position: relative;

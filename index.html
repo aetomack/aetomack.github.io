@@ -36,6 +36,19 @@ Could mispell words twice and backspace twice. Funny!
         <span class="comment">/*@author Alex Tomack, copywrite @2024 - All rights reserved*/</span>
         <br>
 
+        <!--Struct for jobs-->
+        <p class = "class">
+            <span class="structure">struct <span class="class">Job </span><span class="comment">{</span></span>
+                <br>
+            <span style="padding-left: 40px" class="class">std<span class = "white">::</span>string <span class="private">role</span></span><span class="white">;</span>
+            <br>
+            <span style="padding-left: 40px" class="class">std<span class = "white">::</span>string <span class="private">company</span></span><span class="white">;</span>
+            <br>
+            <span style="padding-left: 40px" class="class">int <span class="private">duration</span></span><span class="white">;</span>
+            <br>
+            <span class="comment">};</span>
+        </p>
+
         <!--General info: About me, education, passions.-->
         <p class="class">
             <span class = "comment">/**
@@ -54,7 +67,6 @@ Could mispell words twice and backspace twice. Funny!
                 <br>
             <span class = "comment"> };</span>
         </p>
-        <br>
 
         <!--Experience-->
         <p class="class">
@@ -74,10 +86,9 @@ Could mispell words twice and backspace twice. Funny!
                 <br>
             <span class = "comment"> };</span>
         </p>
-        <br>
 
         <!--Contact-->
-        <p class="class">
+        <p style = "line-height: 1.2" class="class">
             <span class = "comment">/**
                 <br> * <span class = "structure">@class </span><span class = "class">Contact</span>
                 <br> * <span class = "structure">@brief </span> Feel free to reach out
@@ -95,12 +106,15 @@ Could mispell words twice and backspace twice. Funny!
             <br>
             <span class = "method">Contact<span class = "string">()</span></span>
             <br>
+            <span style = "padding-left:40px" class="white">: </span><span class="private">phoneNumber<span class="string">("724-672-2835")</span></span>
+            <br>
+            <span style = "padding-left:40px" class="white">, </span><span class="private">email<span class="string">("alexander.e.tomack@vanderbilt.edu")</span></span><span class="class">{}</span>
             <br>
             <span class="structure">private:</span>
             <br>
-            <span class = "private"><span class = "class">std::string </span>phoneNumber</span>;
+            <span style="padding-left:40px" class = "private"><span class = "class">std<span class="white">::</span>string </span>phoneNumber</span><span class="white">;</span>
             <br>
-            <span class = "private"><span class = "class">std::string </span>email</span>;
+            <span style="padding-left:40px" class = "private"><span class = "class">std<span class="white">::</span>string </span>email</span><span class="white">;</span>
             <br>
             <span class = "comment"> };</span>
         </p>
