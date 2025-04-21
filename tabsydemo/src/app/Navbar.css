@@ -1,0 +1,23 @@
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+    padding: 1rem;
+    color:rgb(70, 75, 75);
+    font-size: 1.15rem;
+}
+
+.navbar-left .navbar-left-links{
+    margin-left: 1rem;
+    padding:1rem;
+}
+
+.navbar-right .navbar-right-links{
+    margin-right: 1rem;
+    padding:1rem;
+}
+
