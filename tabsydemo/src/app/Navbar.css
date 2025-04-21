@@ -4,20 +4,17 @@
     top: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
-    padding: 1rem;
-    color:rgb(70, 75, 75);
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.85));
+    padding: 3rem;
+    color:rgb(0, 0, 0);
     font-size: 1.15rem;
 }
 
-.navbar-left .navbar-left-links{
-    margin-left: 1rem;
-    padding:1rem;
-}
-
-.navbar-right .navbar-right-links{
-    margin-right: 1rem;
-    padding:1rem;
+.navbar-contact {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    height: 100%; /* ensures it fills full navbar height */
 }
 
