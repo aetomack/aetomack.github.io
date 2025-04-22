@@ -4,19 +4,23 @@
     align-items: center;
     gap: 1.5rem;
     margin-top: 11rem;
-    color: #ffffff;
+    color: #171717;
 }
 
 .download-link {
-    display: inline-block;
-    padding: 1rem;
-    
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 600px; 
+    background-color: var(--foreground); 
+    text-align: center;
+    border: 2px solid #f87c3a;
+    border-radius: 12px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 
-.windows-download {
-    background-color: #171717;
-}
-
-.mac-download {
-    background-color: #171717;
+.download-link:hover {
+    background-color: #f87c3a;
+    border-color: #ffffff;
+    transform: scale(1.02);
 }

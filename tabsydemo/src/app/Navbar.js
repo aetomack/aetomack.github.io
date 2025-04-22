@@ -4,10 +4,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import './Navbar.css';
 
-function HoverComponent() {
-    const [isHovering, setIsHovering] = useState(false);
-}
-
 const Navbar = () => {
     const [isHovering, setIsHovering] = useState(false);
 
@@ -26,10 +22,10 @@ const Navbar = () => {
                 onMouseEnter={()=>setIsHovering(true)}
                 onMouseLeave={()=>setIsHovering(false)}
                 style={{
-                    color: isHovering ? 'rgb(255, 179, 138)' : '#494949'
+                    color: isHovering ? '#f87c3a' : '#494949'
                 }}
             >
-                <a href = "mailto:contact@tabsy.com">Contact Us</a>
+                <a href = "mailto::contact@tabsy.com">Contact Us</a>
             </div>
         </nav>
     );

@@ -1,14 +1,15 @@
 .tagline {
+    height: 40rem;
     display: flex;
     justify-content: center;
     text-align: center;
     position: relative;
-    font-size: clamp(2rem, 6vw, 5rem);
-    height: 250px; 
+    font-size: clamp(7rem, 6vw, 0rem);
     margin: auto;
-    padding-bottom: 3rem;
+    padding: 3rem 2rem 10rem;
     width: 50%;
     color: #494949;
+    margin-bottom: clamp(3rem, 10vw, 7rem);
 }
 
 .tagline-caption {

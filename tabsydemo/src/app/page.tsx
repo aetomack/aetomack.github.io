@@ -1,6 +1,7 @@
 import Navbar from "./Navbar.js";
 import Intro from "./Intro.js";
-import Downloads from "./Downloads.js"
+import Downloads from "./Downloads.js";
+import DemoCarousel from "./DemoCarousel.js";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Navbar />
         <Intro />
         <Downloads />
+        <DemoCarousel deviceType='desktop'/>
       </main>
       <footer>
         

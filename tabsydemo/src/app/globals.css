@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /*Color Scheme: first for fore, second for highlights.*/
-    --background: #ffd7b5;
+    --background: #ffffff;
     --foreground: #fa945d;
   }
 }
