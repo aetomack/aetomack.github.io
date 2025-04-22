@@ -1,0 +1,22 @@
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 11rem;
+    color: #ffffff;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 1rem;
+    
+}
+
+.windows-download {
+    background-color: #171717;
+}
+
+.mac-download {
+    background-color: #171717;
+}

@@ -1,20 +1,20 @@
 .navbar {
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.85));
-    padding: 3rem;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.65));
+    padding: 2rem;
     color:rgb(0, 0, 0);
     font-size: 1.15rem;
 }
 
 .navbar-contact {
-    font-size: 24px;
+    font-size: 22px;
     display: flex;
     align-items: center;
     height: 100%; /* ensures it fills full navbar height */
+    transition: font-size 0.2s;
 }
-

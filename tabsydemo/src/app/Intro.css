@@ -1,0 +1,35 @@
+.tagline {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-size: clamp(2rem, 6vw, 5rem);
+    height: 250px; 
+    margin: auto;
+    padding-bottom: 3rem;
+    width: 50%;
+    color: #494949;
+}
+
+.tagline-caption {
+    padding-top: 20px;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.typewriter {
+    color: var(--foreground);
+    border-right: 2px solid var(--foreground);
+    white-space: wrap;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--foreground);
+    }
+  }
