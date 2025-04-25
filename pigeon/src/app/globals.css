@@ -3,6 +3,8 @@
 :root {
   --background: #30366e;
   --foreground: #171717;
+  --text: #ffffff;
+  --alt-text: #000000;
 }
 
 @theme inline {
@@ -15,8 +17,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /*Color Scheme: first for fore, second for highlights.*/
-    --background: #30366e;
-    --foreground: #fa945d;
+    --background: #141a50;
+    --foreground: #ffffff;
   }
 }
 

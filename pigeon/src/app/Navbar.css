@@ -1,0 +1,41 @@
+
+.navbar {
+    display: flex;
+    position: fixed; 
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+}
+
+.tabsy {
+    font-size: larger;
+    display:flex;
+    align-content: left;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    display:block;
+}
+
+.navbar-contact {
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: var(--foreground);
+    border: 8px solid var(--foreground);
+    border-radius: 30px;
+    color: var(--alt-text);
+}
+
+.navbar-contact:hover {
+    background-color: #a7a7a7;
+    border-color: #a7a7a7;
+    transform: scale(1.02);
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}

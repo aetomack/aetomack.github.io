@@ -1,0 +1,48 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Archivo', sans-serif;
+}
+
+.tagline-text {
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.tagline-header {
+  font-size: 5rem;
+}
+
+.highlights {
+  color: #29c5ab;
+}
+
+.carousel-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    background-color: #ffffff; 
+    border: 5px solid var(--foreground);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.download-buttons {
+  text-decoration: none;
+  color: #000000;
+  display: inline-block;
+  padding: 0px 20px;
+  background-color: var(--foreground);
+  border: 20px solid var(--foreground);
+  border-radius: 40px;
+}
+
+.download-buttons:hover {
+  background-color: #a7a7a7;
+  border-color: #a7a7a7;
+  transform: scale(1.02);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}

@@ -10,7 +10,7 @@ export default function Home() {
         <Navbar />
         <Intro />
         <Downloads />
-        <DemoCarousel deviceType='desktop'/>
+        <DemoCarousel />
       </main>
       <footer>
         
