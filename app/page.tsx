@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Dither from "../public/assets/js/Dither";
+import Dither from "./lib/Dither";
 
 const Page: React.FC = () => {
   return (
