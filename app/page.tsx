@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import Dither from "../public/assets/js/Dither.js";
 
 const Page: React.FC = () => {
