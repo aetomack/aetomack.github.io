@@ -1,21 +1,25 @@
 // app/layout.tsx
+import "./globals.css";
 import type { Metadata } from "next";
-//import "./globals.css";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Alexander Tomack",
-  description: "CS & Econ Vanderbilt Alum — Software Engineer, Musician, Painter",
+  description: "CS & Econ Vanderbilt Alum",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head />
-      <body>{children}</body>
+      <head>
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <noscript>
+          <link rel="stylesheet" href="/assets/css/noscript.css" />
+        </noscript>
+      </head>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
