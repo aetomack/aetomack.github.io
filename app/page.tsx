@@ -15,7 +15,7 @@ const Page: React.FC = () => {
               <h1>Alexander Tomack</h1>
               <p>CS & Econ Vanderbilt Alum</p>
               <p>
-                Software engineer, actor/musician, painter.
+                Software engineer, actor/musician, painter. 
                 <br />
                 Most of my{" "}
                 <a href="https://github.com/aetomack" target="_blank" rel="noreferrer">
@@ -49,7 +49,7 @@ const Page: React.FC = () => {
           <article id="intro">
             <h2 className="major">Intro</h2>
             <span className="image main">
-              <img src="images/pic01.jpg" alt="" />
+              <img src="/public/images/pic01.jpg" alt="" />
             </span>
             <p>Good code, for good people, for good purpose.</p>
             <p>
@@ -65,7 +65,7 @@ const Page: React.FC = () => {
           <article id="work">
             <h2 className="major">Work</h2>
             <span className="image main">
-              <img src="images/pic02.jpg" alt="" />
+              <img src="/public/images/pic02.jpg" alt="" />
             </span>
             <p>I've worked all across the stack.</p>
             <p>
@@ -80,7 +80,7 @@ const Page: React.FC = () => {
           <article id="about">
             <h2 className="major">About</h2>
             <span className="image main">
-              <img src="images/bwheadshot.jpg" alt="" />
+              <img src="/public/images/bwheadshot.jpg" alt="" />
             </span>
             <p>
               On top of engineering, I'm also an avid musician, actor, painter, and photographer.
