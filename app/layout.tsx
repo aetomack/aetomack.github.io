@@ -11,9 +11,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="./app/assets/css/main.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
         <noscript>
-          <link rel="stylesheet" href="./app/assets/css/noscript.css" />
+          <link rel="stylesheet" href="./assets/css/noscript.css" />
         </noscript>
       </head>
       <body>
