@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Dither from "../public/assets/js/Dither.js";
 
