@@ -1,0 +1,157 @@
+import React from "react";
+
+const Page: React.FC = () => {
+  return (
+    <div className="is-preload">
+      {/* Wrapper */}
+      <div id="wrapper">
+        {/* Header */}
+        <header id="header">
+          <div className="logo">
+            <span className="icon fa-gem"></span>
+          </div>
+          <div className="content">
+            <div className="inner">
+              <h1>Alexander Tomack</h1>
+              <p>CS & Econ Vanderbilt Alum</p>
+              <p>
+                Software engineer, actor/musician, painter.
+                <br />
+                Most of my{" "}
+                <a href="https://github.com/aetomack" target="_blank" rel="noreferrer">
+                  GitHub
+                </a>{" "}
+                work is private, but feel free to ask about it!
+              </p>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#intro">Intro</a>
+              </li>
+              <li>
+                <a href="#work">Work</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        {/* Main */}
+        <div id="main">
+          {/* Intro */}
+          <article id="intro">
+            <h2 className="major">Intro</h2>
+            <span className="image main">
+              <img src="images/pic01.jpg" alt="" />
+            </span>
+            <p>Good code, for good people, for good purpose.</p>
+            <p>
+              I’m a software engineer with a strong belief that writing good code starts with
+              understanding why it’s written. I’m not just driven by technical challenges, I’m driven
+              by clarity of purpose. My work is always informed by the bigger picture: what the
+              company is building, who it serves, and how each line of code contributes to that
+              mission.
+            </p>
+          </article>
+
+          {/* Work */}
+          <article id="work">
+            <h2 className="major">Work</h2>
+            <span className="image main">
+              <img src="images/pic02.jpg" alt="" />
+            </span>
+            <p>I've worked all across the stack.</p>
+            <p>
+              I recently served as CTO and an engineer at Arrwoz -- a mental health startup. There, I
+              contributed to and oversaw the development of front and backend infrastructure. I've
+              also worked on multiple machine learning projects; frontend teams; and data engineering
+              projects.
+            </p>
+          </article>
+
+          {/* About */}
+          <article id="about">
+            <h2 className="major">About</h2>
+            <span className="image main">
+              <img src="images/bwheadshot.jpg" alt="" />
+            </span>
+            <p>
+              On top of engineering, I'm also an avid musician, actor, painter, and photographer.
+              I've performed on stage for the past decade in plays and musicals, and starred in
+              student/amateur films. My photography work is mostly for fun, although has been
+              displayed at Vanderbilt's expo for the arts in Chicago.
+            </p>
+          </article>
+
+          {/* Contact */}
+          <article id="contact">
+            <h2 className="major">Contact</h2>
+            <form method="post" action="#">
+              <div className="fields">
+                <div className="field half">
+                  <label htmlFor="name">Name</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div className="field half">
+                  <label htmlFor="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+                <div className="field">
+                  <label htmlFor="message">Message</label>
+                  <textarea name="message" id="message" rows={4}></textarea>
+                </div>
+              </div>
+              <ul className="actions">
+                <li>
+                  <input type="submit" value="Send Message" className="primary" />
+                </li>
+                <li>
+                  <input type="reset" value="Reset" />
+                </li>
+              </ul>
+            </form>
+            <ul className="icons">
+              <li>
+                <a
+                  href="https://github.com/aetomack"
+                  className="icon brands fa-github"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="label">GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/alex-tomack/"
+                  className="icon brands fa-linkedin"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="label">LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        {/* Footer */}
+        <footer id="footer">
+          <p className="copyright">&copy; Alexander Tomack.</p>
+        </footer>
+      </div>
+
+      {/* BG */}
+      <div id="bg"></div>
+    </div>
+  );
+};
+
+export default Page;
