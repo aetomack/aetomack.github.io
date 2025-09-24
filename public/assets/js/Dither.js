@@ -5,7 +5,7 @@ import { EffectComposer, wrapEffect } from '@react-three/postprocessing';
 import { Effect } from 'postprocessing';
 import * as THREE from 'three';
 
-import '/public/assets/css/Dither.css';
+import '../css/Dither';
 
 const waveVertexShader = `
 precision highp float;
