@@ -1,6 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import { ReactNode } from "react";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Alexander Tomack",
@@ -18,6 +19,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <Script src="/assets/js/jquery.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/browser.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/breakpoints.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/util.js" strategy="afterInteractive" />
+        <Script src="/assets/js/main.js" strategy="afterInteractive" />
       </body>
     </html>
   );
