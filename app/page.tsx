@@ -1,11 +1,27 @@
 "use client";
 
 import React from "react";
+import "../public/assets/css/main.css";
+import "../public/assets/css/noscript.css";
 import Dither from "./lib/Dither";
 
 const Page: React.FC = () => {
   return (
     <div className="is-preload">
+      {/*Dither background*/}
+      <div 
+        id = "bg"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100vh",
+          zIndex: -1,
+        }}
+      >
+        <Dither/>
+      </div>
       {/* Wrapper */}
       <div id="wrapper">
         {/* Header */}
@@ -21,7 +37,11 @@ const Page: React.FC = () => {
                 Software engineer, actor/musician, painter.
                 <br />
                  Most of my{" "}
-                <a href="https://github.com/aetomack" target="_blank" rel="noreferrer">
+                <a 
+                  href="https://github.com/aetomack" 
+                  target="_blank" 
+                  rel="noreferrer"
+                >
                   GitHub
                 </a>{" "}
                 work is private, but feel free to ask about it!
