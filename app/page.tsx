@@ -129,7 +129,7 @@ const Page: React.FC = () => {
                 <div className="field">
                   <label htmlFor="message">Message</label>
                   <textarea name="message" id="message" rows={4}></textarea>
-                </div>git@github.com:aetomack/aetomack.github.io.git
+                </div>
               </div>
               <ul className="actions">
                 <li>
