@@ -18,9 +18,9 @@ const Page: React.FC = () => {
               <h1>Alexander Tomack</h1>
               <p>CS & Econ Vanderbilt Alum</p>
               <p>
-                Software engineer, actor/musician, painter. 
+                Software engineer, actor/musician, painter.
                 <br />
-                Most of my{" "}
+                 Most of my{" "}
                 <a href="https://github.com/aetomack" target="_blank" rel="noreferrer">
                   GitHub
                 </a>{" "}
@@ -72,9 +72,9 @@ const Page: React.FC = () => {
             </span>
             <p>I've worked all across the stack.</p>
             <p>
-              I recently served as CTO and an engineer at Arrwoz -- a mental health startup. There, I
+              I recently served as CTO and an engineer at Arrowz -- a mental health startup. There, I
               contributed to and oversaw the development of front and backend infrastructure. I've
-              also worked on multiple machine learning projects; frontend teams; and data engineering
+              also worked on multiple machine learning projects, frontend teams, and data engineering
               projects.
             </p>
           </article>
@@ -104,7 +104,7 @@ const Page: React.FC = () => {
                 </div>
                 <div className="field half">
                   <label htmlFor="email">Email</label>
-                  <input type="text" name="email" id="email" />
+                  <input type="text" name="email" id="email" /git@github.com:aetomack/aetomack.github.io.git>
                 </div>
                 <div className="field">
                   <label htmlFor="message">Message</label>
