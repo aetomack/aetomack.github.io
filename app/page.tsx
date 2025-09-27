@@ -36,13 +36,26 @@ const Page: React.FC = () => {
                 <DecryptedText 
                 text="Alexander Tomack"
                 speed={100}
+                animateOn="view"
+                revealDirection="center"
                 maxIterations={20}
                 characters="ABCD1234!?"
                 className="revealed"
                 parentClassName="all-letters"
                 encryptedClassName="encrypted"/>
               </h1>
-              <p>CS & Econ Vanderbilt Alum</p>
+              <p>
+                <DecryptedText 
+                text="CS & Econ Vanderbilt Alum"
+                speed={100}
+                animateOn="view"
+                revealDirection="center"
+                maxIterations={20}
+                characters="ABCD1234!?"
+                className="revealed"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"/>
+              </p>
               <p>
                 Full Stack & ML Engineer
                 <br />
