@@ -4,23 +4,34 @@ import React from "react";
 import "../public/assets/css/main.css";
 import "../public/assets/css/noscript.css";
 import Dither from "./lib/Dither";
+import FaultyTerminal from "./lib/FaultyTerminal";
 import DecryptedText from "./lib/Decrypt";
 
 const Page: React.FC = () => {
   return (
     <div className="is-preload " >
       {/*Dither background*/}
-      <div id="bg">
-        <Dither
-          waveSpeed={0.05}
-          waveFrequency={3}
-          waveAmplitude={0.3}
-          waveColor={[0.5, 0.5, 0.5]}
-          colorNum={4}
-          pixelSize={2}
-          enableMouseInteraction={true}
-          mouseRadius={1}
-        />
+      <div style = {{position:'relative'}} id="bg">
+         <FaultyTerminal
+          scale={1.5}
+          gridMul={[2, 1]}
+          digitSize={1.2}
+          timeScale={1}
+          pause={false}
+          scanlineIntensity={1}
+          glitchAmount={1}
+          flickerAmount={1}
+          noiseAmp={1}
+          chromaticAberration={0}
+          dither={0}
+          curvature={0}
+          tint="#ffffff"
+          mouseReact={true}
+          mouseStrength={0.5}
+          pageLoadAnimation={false}
+          brightness={1} 
+          className={undefined} 
+          style={undefined}        />
       </div>
 
       {/* Wrapper */}
