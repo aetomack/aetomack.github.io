@@ -47,10 +47,10 @@ const Page: React.FC = () => {
               <p>
                 <DecryptedText 
                 text="CS & Econ Vanderbilt Alum"
-                speed={100}
+                speed={150}
                 animateOn="view"
                 revealDirection="center"
-                maxIterations={20}
+                maxIterations={13}
                 characters="ABCD1234!?"
                 className="revealed"
                 parentClassName="all-letters"
