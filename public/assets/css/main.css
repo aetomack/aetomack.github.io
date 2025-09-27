@@ -646,7 +646,6 @@ input, select, textarea {
 
 		.image:before {
 			pointer-events: none;
-			background-image: url("../../images/overlay.png");
 			background-color: rgba(19, 21, 25, 0.5);
 			border-radius: 4px;
 			content: '';
@@ -1202,6 +1201,10 @@ input, select, textarea {
 		width: 100%;
 		padding: 4rem 2rem;
 		z-index: 3;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
 	}
 
 		#wrapper:before {
