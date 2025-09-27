@@ -4,6 +4,7 @@ import React from "react";
 import "../public/assets/css/main.css";
 import "../public/assets/css/noscript.css";
 import Dither from "./lib/Dither";
+import DecryptedText from "./lib/Decrypt";
 
 const Page: React.FC = () => {
   return (
@@ -31,7 +32,16 @@ const Page: React.FC = () => {
           </div>
           <div className="content">
             <div className="inner">
-              <h1>Alexander Tomack</h1>
+              <h1>
+                <DecryptedText 
+                text="Alexander Tomack"
+                speed={100}
+                maxIterations={20}
+                characters="ABCD1234!?"
+                className="revealed"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"/>
+              </h1>
               <p>CS & Econ Vanderbilt Alum</p>
               <p>
                 Full Stack & ML Engineer
