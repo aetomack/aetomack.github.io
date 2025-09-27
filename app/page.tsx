@@ -14,11 +14,11 @@ const Page: React.FC = () => {
           waveSpeed={0.05}
           waveFrequency={3}
           waveAmplitude={0.3}
-          waveColor={[0.4, 0.6, 1.0]}
+          waveColor={[0.5, 0.5, 0.5]}
           colorNum={4}
           pixelSize={2}
           enableMouseInteraction={true}
-          mouseRadius={0.8}
+          mouseRadius={1}
         />
       </div>
 
