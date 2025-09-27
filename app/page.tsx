@@ -34,7 +34,7 @@ const Page: React.FC = () => {
               <h1>Alexander Tomack</h1>
               <p>CS & Econ Vanderbilt Alum</p>
               <p>
-                Software engineer, actor/musician, painter.
+                Full Stack & ML Engineer
                 <br />
                  Most of my{" "}
                 <a 
@@ -92,10 +92,9 @@ const Page: React.FC = () => {
             </span>
             <p>I've worked all across the stack.</p>
             <p>
-              I recently served as CTO and an engineer at Arrowz -- a mental health startup. There, I
-              contributed to and oversaw the development of front and backend infrastructure. I've
-              also worked on multiple machine learning projects, frontend teams, and data engineering
-              projects.
+              Recently, I worked at a mental health startup, Arrowz, revamping their backend ML implementation and launching a revenue model; at a local org delivering thousands of datasets to hundreds of parishes and schools; and at an ML startup in South Africa in collaboration with Western Sydney University implementing prototype unsupervised semantic segmentation models for sky observations.
+
+In my research, I've continued to explore semantic segmentation models @ Vanderbilt's digital lab in collaboration with our archives, training few-shot semantic segmentation models on antique stereoscopic images for VR viewing. I'm fascinated by machine learning methods and low-level programming, and as artificial intelligence development ramps up and permeates every layer of our lives, it's increasingly important to understand the science-- both as an engineer and as a citizen.
             </p>
           </article>
 
@@ -106,7 +105,7 @@ const Page: React.FC = () => {
               <img src="/public/images/bwheadshot.jpg" alt="" />
             </span>
             <p>
-              On top of bgengineering, I'm also an avid musician, actor, painter, and photographer.
+              On top of engineering, I'm also an avid musician, actor, painter, and photographer.
               I've performed on stage for the past decade in plays and musicals, and starred in
               student/amateur films. My photography work is mostly for fun, although has been
               displayed at Vanderbilt's expo for the arts in Chicago.
