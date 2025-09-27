@@ -9,19 +9,19 @@ const Page: React.FC = () => {
   return (
     <div className="is-preload " >
       {/*Dither background*/}
-      <div 
-        id = "bg"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100vh",
-          zIndex: -1,
-        }}
-      >
-        <Dither/>
+      <div id="bg">
+        <Dither
+          waveSpeed={0.05}
+          waveFrequency={3}
+          waveAmplitude={0.3}
+          waveColor={[0.4, 0.6, 1.0]}
+          colorNum={4}
+          pixelSize={2}
+          enableMouseInteraction={true}
+          mouseRadius={0.8}
+        />
       </div>
+
       {/* Wrapper */}
       <div id="wrapper">
         {/* Header */}
