@@ -7,7 +7,7 @@ import Dither from "./lib/Dither";
 
 const Page: React.FC = () => {
   return (
-    <div className="is-preload">
+    <div className="is-preload " >
       {/*Dither background*/}
       <div 
         id = "bg"
@@ -106,7 +106,7 @@ const Page: React.FC = () => {
               <img src="/public/images/bwheadshot.jpg" alt="" />
             </span>
             <p>
-              On top of engineering, I'm also an avid musician, actor, painter, and photographer.
+              On top of bgengineering, I'm also an avid musician, actor, painter, and photographer.
               I've performed on stage for the past decade in plays and musicals, and starred in
               student/amateur films. My photography work is mostly for fun, although has been
               displayed at Vanderbilt's expo for the arts in Chicago.
@@ -151,7 +151,7 @@ const Page: React.FC = () => {
                   <span className="label">GitHub</span>
                 </a>
               </li>
-              <li>
+              <li>html send email link
                 <a
                   href="https://www.linkedin.com/in/alex-tomack/"
                   className="icon brands fa-linkedin"
@@ -167,7 +167,7 @@ const Page: React.FC = () => {
 
         {/* Footer */}
         <footer id="footer">
-          <p className="copyright">&copy; Alexander Tomack.</p>
+          <p className="copyright">&copy; Alexander Tomack</p>
         </footer>
       </div>
     </div>
