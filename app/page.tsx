@@ -11,7 +11,7 @@ const Page: React.FC = () => {
   return (
     <div className="is-preload " >
       {/*Dither background*/}
-      <div style = {{position:'relative'}} id="bg">
+      <div style = {{width: '100%', height: '600px', position:'relative'}} id="bg">
          <FaultyTerminal
           scale={1.5}
           gridMul={[2, 1]}
