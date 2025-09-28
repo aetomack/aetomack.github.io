@@ -72,35 +72,38 @@ const Page: React.FC = () => {
                 parentClassName="all-letters"
                 encryptedClassName="encrypted"/>
                 <br />
-                <DecryptedText 
-                text="Most of my "
-                speed={108}
-                sequential={true}
-                animateOn="view"
-                revealDirection="start"
-                maxIterations={13}
-                characters="ABCD1234!?"
-                className="revealed"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"/>
-                <a 
-                  href="https://github.com/aetomack" 
-                  target="_blank" 
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a> 
-                <DecryptedText 
-                text=" work is private, but feel free to ask about it!"
-                speed={115}
-                sequential={true}
-                animateOn="view"
-                revealDirection="start"
-                maxIterations={13}
-                characters="ABCD1234!?"
-                className="revealed"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"/>
+                <p>
+                  <DecryptedText 
+                  text="Most of my "
+                  speed={108}
+                  sequential={true}
+                  animateOn="view"
+                  revealDirection="start"
+                  maxIterations={13}
+                  characters="ABCD1234!?"
+                  className="revealed"
+                  parentClassName="all-letters"
+                  encryptedClassName="encrypted"/>
+                  <a 
+                    href="https://github.com/aetomack" 
+                    target="_blank" 
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a> 
+                  <DecryptedText 
+                  text=" work is private, but feel free to ask about it!"
+                  speed={115}
+                  sequential={true}
+                  animateOn="view"
+                  revealDirection="start"
+                  maxIterations={13}
+                  characters="ABCD1234!?"
+                  className="revealed"
+                  parentClassName="all-letters"
+                  encryptedClassName="encrypted"/>
+                </p>
+                
                 </p>
             </div>
           </div>
