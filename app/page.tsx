@@ -31,7 +31,8 @@ const Page: React.FC = () => {
           pageLoadAnimation={false}
           brightness={1} 
           className={undefined} 
-          style={undefined}        />
+          style={undefined}        
+          />
       </div>
 
       {/* Wrapper */}
@@ -46,10 +47,10 @@ const Page: React.FC = () => {
               <h1>
                 <DecryptedText 
                 text="Alexander Tomack"
-                speed={50}
+                speed={65}
                 sequential={true}
                 animateOn="view"
-                revealDirection="end"
+                revealDirection="start"
                 maxIterations={20}
                 characters="ABCD1234!?"
                 className="revealed"
@@ -59,7 +60,7 @@ const Page: React.FC = () => {
               <p>
                 <DecryptedText 
                 text="CS & Econ Vanderbilt Alum"
-                speed={50}
+                speed={55}
                 sequential={true}
                 animateOn="view"
                 revealDirection="start"
@@ -70,18 +71,48 @@ const Page: React.FC = () => {
                 encryptedClassName="encrypted"/>
               </p>
               <p>
-                Full Stack & ML Engineer
+                <DecryptedText 
+                text="Full Stack & ML Engineer"
+                speed={45}
+                sequential={true}
+                animateOn="view"
+                revealDirection="start"
+                maxIterations={13}
+                characters="ABCD1234!?"
+                className="revealed"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"/>
                 <br />
-                 Most of my{" "}
+                <DecryptedText 
+                text="Most of my "
+                speed={35}
+                sequential={true}
+                animateOn="view"
+                revealDirection="start"
+                maxIterations={13}
+                characters="ABCD1234!?"
+                className="revealed"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"/>
                 <a 
                   href="https://github.com/aetomack" 
                   target="_blank" 
                   rel="noreferrer"
                 >
                   GitHub
-                </a>{" "}
-                work is private, but feel free to ask about it!
-              </p>
+                </a> 
+                <DecryptedText 
+                text=" work is private, but feel free to ask about it!"
+                speed={15}
+                sequential={true}
+                animateOn="view"
+                revealDirection="start"
+                maxIterations={13}
+                characters="ABCD1234!?"
+                className="revealed"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"/>
+                </p>
             </div>
           </div>
           <nav>
