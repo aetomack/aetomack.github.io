@@ -23,7 +23,7 @@ const Page: React.FC = () => {
         glitchAmount={1}
         flickerAmount={1}
         noiseAmp={1}
-        chromaticAberration={2}
+        chromaticAberration={0.5}
         dither={0}
         curvature={0.1}
         tint="#82f782ff"
