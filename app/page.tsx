@@ -36,7 +36,7 @@ const Page: React.FC = () => {
               <h1>
                 <DecryptedText 
                 text="Alexander Tomack"
-                speed={65}
+                speed={100}
                 sequential={true}
                 animateOn="view"
                 revealDirection="start"
@@ -49,7 +49,7 @@ const Page: React.FC = () => {
               <p>
                 <DecryptedText 
                 text="CS & Econ Vanderbilt Alum"
-                speed={55}
+                speed={110}
                 sequential={true}
                 animateOn="view"
                 revealDirection="start"
@@ -62,7 +62,7 @@ const Page: React.FC = () => {
               <p>
                 <DecryptedText 
                 text="Full Stack & ML Engineer"
-                speed={45}
+                speed={106}
                 sequential={true}
                 animateOn="view"
                 revealDirection="start"
@@ -74,7 +74,7 @@ const Page: React.FC = () => {
                 <br />
                 <DecryptedText 
                 text="Most of my "
-                speed={35}
+                speed={108}
                 sequential={true}
                 animateOn="view"
                 revealDirection="start"
@@ -92,7 +92,7 @@ const Page: React.FC = () => {
                 </a> 
                 <DecryptedText 
                 text=" work is private, but feel free to ask about it!"
-                speed={15}
+                speed={115}
                 sequential={true}
                 animateOn="view"
                 revealDirection="start"
