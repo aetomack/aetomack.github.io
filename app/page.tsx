@@ -26,7 +26,7 @@ const Page: React.FC = () => {
         chromaticAberration={0}
         dither={0}
         curvature={0.1}
-        tint="#c80505ff"
+        tint="#49e1ffff"
         mouseReact={true}
         mouseStrength={0.5}
         pageLoadAnimation={true}
