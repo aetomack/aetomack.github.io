@@ -1,5 +1,5 @@
 <?php
-  if ($_SERVER["REQUEST_METHOD"] == POST) {
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialschars($_POST['email']);
     $message = htmlspecial chars($_POST['message']);

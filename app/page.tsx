@@ -3,7 +3,6 @@
 import React from "react";
 import "../public/assets/css/main.css";
 import "../public/assets/css/noscript.css";
-import dynamic from "next/dynamic";
 import DecryptedText from "./lib/Decrypt";
 import Particles from './lib/Particles.js';
 
@@ -174,7 +173,7 @@ In my research, I've continued to explore semantic segmentation models @ Vanderb
           {/* Contact */}
           <article id="contact">
             <h2 className="major">Contact</h2>
-            <form method="post" action="#">
+            <form method="POST" action="../send_email.php">
               <div className="fields">
                 <div className="field half">
                   <label htmlFor="name">Name</label>
