@@ -209,7 +209,7 @@ In my research, I've continued to explore semantic segmentation models @ Vanderb
                   <span className="label">GitHub</span>
                 </a>
               </li>
-              <li>html send email link
+              <li>
                 <a
                   href="https://www.linkedin.com/in/alex-tomack/"
                   className="icon brands fa-linkedin"
