@@ -202,7 +202,7 @@ In my research, I've continued to explore semantic segmentation models @ Vanderb
               <li>
                 <a 
                   href = "https://www.linkedin.com/in/alex-tomack/"
-                  className = "fa fa-square-linkedin" 
+                  className = "fa-square-linkedin" 
                   aria-hidden = "true"
                   target = "_blank"
                   rel = "noreferrer"
