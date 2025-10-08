@@ -207,9 +207,6 @@ In my research, I've continued to explore semantic segmentation models @ Vanderb
                   target = "_blank"
                   rel = "noreferrer"
                 >
-                  <span className = "label">
-                    LinkedIn
-                  </span>
                 </a>
               </li>
             </ul>
