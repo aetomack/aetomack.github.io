@@ -200,23 +200,16 @@ In my research, I've continued to explore semantic segmentation models @ Vanderb
             </form>
             <ul className="icons">
               <li>
-                <a
-                  href="https://github.com/aetomack"
-                  className="icon brands fa-github"
-                  target="_blank"
-                  rel="noreferrer"
+                <a 
+                  href = "https://www.linkedin.com/in/alex-tomack/"
+                  className = "fa fa-linkedin-square" 
+                  aria-hidden = "true"
+                  target = "_blank"
+                  rel = "noreferrer"
                 >
-                  <span className="label">GitHub</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/alex-tomack/"
-                  className="icon brands fa-linkedin"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="label">LinkedIn</span>
+                  <span className = "label">
+                    LinkedIn
+                  </span>
                 </a>
               </li>
             </ul>
