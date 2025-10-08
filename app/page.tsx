@@ -3,37 +3,25 @@
 import React from "react";
 import "../public/assets/css/main.css";
 import "../public/assets/css/noscript.css";
-import Dither from "./lib/Dither";
 import dynamic from "next/dynamic";
 import DecryptedText from "./lib/Decrypt";
-
-const FaultyTerminal = dynamic(() => import("./lib/FaultyTerminal"), { ssr: false });
+import Particles from './lib/Particles.js';
 
 const Page: React.FC = () => {
   return (
     <div className="is-preload " >
       {/*Dither background*/}
       <div id="bg">
-       <FaultyTerminal
-        scale={1.5}
-        gridMul={[2, 1]}
-        digitSize={1.2}
-        timeScale={0.5}
-        scanlineIntensity={2}
-        glitchAmount={1}
-        flickerAmount={1}
-        noiseAmp={1}
-        chromaticAberration={0}
-        dither={0}
-        curvature={0.1}
-        tint="#ffff1eff"
-        mouseReact={true}
-        mouseStrength={0.5}
-        pageLoadAnimation={true}
-        brightness={1}
-        className=""
-        style={{}}
-      />
+        <Particles 
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount = {200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
       </div>
       {/* Wrapper */}
       <div id="wrapper">
