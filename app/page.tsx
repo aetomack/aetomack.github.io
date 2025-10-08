@@ -197,12 +197,12 @@ In my research, I've continued to explore semantic segmentation models @ Vanderb
                   <input type="reset" value="Reset" />
                 </li>
               </ul>
-            </form>
+            </form>linkedin
             <ul className="icons">
               <li>
                 <a 
                   href = "https://www.linkedin.com/in/alex-tomack/"
-                  className = "fa fa-linkedin-square" 
+                  className = "fa fa-square-linkedin" 
                   aria-hidden = "true"
                   target = "_blank"
                   rel = "noreferrer"
@@ -212,7 +212,6 @@ In my research, I've continued to explore semantic segmentation models @ Vanderb
             </ul>
           </article>
         </div>
-
         {/* Footer */}
         <footer id="footer">
           <p className="copyright">&copy; Alexander Tomack</p>
