@@ -13,6 +13,7 @@ const Page: React.FC = () => {
       {/*Dither background*/}
       <div id="bg">
         <Particles 
+          className = 'any'
           particleColors={['#ffffff', '#ffffff']}
           particleCount = {200}
           particleSpread={10}
