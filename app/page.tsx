@@ -60,7 +60,7 @@ const Page: React.FC = () => {
               </p>
               <p>
                 <DecryptedText 
-                text="Full Stack & ML Engineer"
+                text="Full Stack | ML | Product"
                 speed={106}
                 sequential={true}
                 animateOn="view"
@@ -73,7 +73,7 @@ const Page: React.FC = () => {
                 <br />
                 <p>
                   <DecryptedText 
-                  text="Most of my "
+                  text="Bridging the gap between"
                   speed={108}
                   sequential={true}
                   animateOn="view"
@@ -83,15 +83,9 @@ const Page: React.FC = () => {
                   className="revealed"
                   parentClassName="all-letters"
                   encryptedClassName="encrypted"/>
-                  <a 
-                    href="https://github.com/aetomack" 
-                    target="_blank" 
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a> 
+                 
                   <DecryptedText 
-                  text=" work is private, but feel free to ask about it!"
+                  text=" excellent code and customer service."
                   speed={115}
                   sequential={true}
                   animateOn="view"
