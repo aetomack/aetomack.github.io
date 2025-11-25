@@ -148,8 +148,10 @@ const Page: React.FC = () => {
             <span className="image main">
               <img src="/public/images/pic02.jpg" alt="" />
             </span>
-            <p>I've worked all across the stack.</p>
+            <p>Across the stack and at a Michelin Key private club</p>
             <p>
+              Currently building a platform for pre-seed startups on campuses and delivering exceptional service at Soho House Nashville. 
+              
               Recently, I worked at a mental health startup, Arrowz, revamping their backend ML implementation and launching a revenue model; at a local org delivering thousands of datasets to hundreds of parishes and schools; and at an ML startup in South Africa in collaboration with Western Sydney University implementing prototype unsupervised semantic segmentation models for sky observations.
 
 In my research, I've continued to explore semantic segmentation models @ Vanderbilt's digital lab in collaboration with our archives, training few-shot semantic segmentation models on antique stereoscopic images for VR viewing. I'm fascinated by machine learning methods and low-level programming, and as artificial intelligence development ramps up and permeates every layer of our lives, it's increasingly important to understand the science-- both as an engineer and as a citizen.
