@@ -196,7 +196,7 @@ In my research, I've continued to explore semantic segmentation models @ Vanderb
                   <input type="reset" value="Reset" />
                 </li>
               </ul>
-            </form>linkedin
+            </form>
             <ul className="icons">
               <li>
                 <a 
