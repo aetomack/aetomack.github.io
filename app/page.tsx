@@ -9,7 +9,6 @@ import Particles from './lib/Particles.js';
 const Page: React.FC = () => {
   return (
     <div className="is-preload " >
-      {/*Dither background*/}
       <div id="bg">
         <Particles 
           className = 'any'
@@ -142,13 +141,17 @@ const Page: React.FC = () => {
             <span className="image main">
               <img src="/public/images/pic02.jpg" alt="" />
             </span>
-            <p>Across the stack and at a Michelin Key private club</p>
+            <p>
+              Across the stack and at a Michelin Key private club
+            </p>
             <p>
               Currently building a platform for pre-seed startups on campuses and delivering exceptional service at Soho House Nashville. 
-              
+            </p>
+            <p>
               Recently, I worked at a mental health startup, Arrowz, revamping their backend ML implementation and launching a revenue model; at a local org delivering thousands of datasets to hundreds of parishes and schools; and at an ML startup in South Africa in collaboration with Western Sydney University implementing prototype unsupervised semantic segmentation models for sky observations.
-
-In my research, I've continued to explore semantic segmentation models @ Vanderbilt's digital lab in collaboration with our archives, training few-shot semantic segmentation models on antique stereoscopic images for VR viewing. I'm fascinated by machine learning methods and low-level programming, and as artificial intelligence development ramps up and permeates every layer of our lives, it's increasingly important to understand the science-- both as an engineer and as a citizen.
+            </p>
+            <p>
+              In my research, I've continued to explore semantic segmentation models @ Vanderbilt's digital lab in collaboration with our archives, training few-shot semantic segmentation models on antique stereoscopic images for VR viewing. I'm fascinated by machine learning methods and low-level programming, and as artificial intelligence development ramps up and permeates every layer of our lives, it's increasingly important to understand the science-- both as an engineer and as a citizen.
             </p>
           </article>
 
