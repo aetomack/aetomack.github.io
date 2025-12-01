@@ -72,7 +72,7 @@ const Page: React.FC = () => {
                 <br />
                 <p>
                   <DecryptedText 
-                  text="Bridging the gap between"
+                  text="Good code, "
                   speed={108}
                   sequential={true}
                   animateOn="view"
@@ -84,7 +84,7 @@ const Page: React.FC = () => {
                   encryptedClassName="encrypted"/>
                  
                   <DecryptedText 
-                  text=" excellent code and customer service."
+                  text="good service."
                   speed={115}
                   sequential={true}
                   animateOn="view"
@@ -142,10 +142,10 @@ const Page: React.FC = () => {
               <img src="/public/images/pic02.jpg" alt="" />
             </span>
             <p>
-              Across the stack and at a Michelin Key private club
+              Across the stack and at Michelin key establishments
             </p>
             <p>
-              Currently building a platform for pre-seed startups on campuses and delivering exceptional service at Soho House Nashville. 
+              Currently building a platform for pre-seed startups on campuses. 
             </p>
             <p>
               Recently, I worked at a mental health startup, Arrowz, revamping their backend ML implementation and launching a revenue model; at a local org delivering thousands of datasets to hundreds of parishes and schools; and at an ML startup in South Africa in collaboration with Western Sydney University implementing prototype unsupervised semantic segmentation models for sky observations.
