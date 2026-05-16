@@ -10,8 +10,10 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@radix-ui/react-tooltip": "^1.2.8",
     "@react-three/fiber": "^9.3.0",
     "@react-three/postprocessing": "^3.0.4",
+    "lucide-react": "^1.16.0",
     "motion": "^12.23.22",
     "next": "15.5.4",
     "ogl": "^1.0.11",
