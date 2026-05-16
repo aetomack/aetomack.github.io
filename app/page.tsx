@@ -7,14 +7,6 @@ import { ChevronDown, ExternalLink, Mail } from "lucide-react";
 
 function GithubIcon({ size = 15 }: { size?: number }) {
   return (
-<<<<<<< HEAD
-    <div className="is-preload " >
-      <div id="bg">
-        <Particles 
-          className = 'any'
-          particleColors={['#ffffff', '#ffffff']}
-          particleCount = {200}
-=======
     <svg
       width={size}
       height={size}
@@ -144,7 +136,6 @@ export default function Page() {
           className=""
           particleColors={["#ffffff", "#a5b4fc"]}
           particleCount={200}
->>>>>>> 5d1877c (facelift)
           particleSpread={10}
           speed={0.1}
           particleBaseSize={100}
@@ -217,59 +208,19 @@ export default function Page() {
                 />
               </p>
               <p>
-<<<<<<< HEAD
-                <DecryptedText 
-                text="Full Stack | ML | Product"
-                speed={106}
-                sequential={true}
-                animateOn="view"
-                revealDirection="start"
-                maxIterations={13}
-                characters="ABCD1234!?"
-                className="revealed"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"/>
-                <br />
-                <p>
-                  <DecryptedText 
-                  text="Good code, "
-                  speed={108}
-=======
                 <DecryptedText
                   text="Full Stack & ML Engineer"
                   speed={60}
->>>>>>> 5d1877c (facelift)
                   sequential={true}
                   animateOn="view"
                   revealDirection="start"
                   maxIterations={10}
                   characters="ABCD1234!?"
-<<<<<<< HEAD
-                  className="revealed"
-                  parentClassName="all-letters"
-                  encryptedClassName="encrypted"/>
-                 
-                  <DecryptedText 
-                  text="good service."
-                  speed={115}
-                  sequential={true}
-                  animateOn="view"
-                  revealDirection="start"
-                  maxIterations={13}
-                  characters="ABCD1234!?"
-                  className="revealed"
-                  parentClassName="all-letters"
-                  encryptedClassName="encrypted"/>
-                </p>
-                
-                </p>
-=======
                   className="text-gray-400"
                   parentClassName=""
                   encryptedClassName="text-indigo-400/40"
                 />
               </p>
->>>>>>> 5d1877c (facelift)
             </div>
 
             <div className="flex flex-wrap gap-2 justify-center max-w-xl">
@@ -278,27 +229,6 @@ export default function Page() {
               ))}
             </div>
 
-<<<<<<< HEAD
-          {/* Work */}
-          <article id="work">
-            <h2 className="major">Work</h2>
-            <span className="image main">
-              <img src="/public/images/pic02.jpg" alt="" />
-            </span>
-            <p>
-              Across the stack and at Michelin key establishments
-            </p>
-            <p>
-              Currently building a platform for pre-seed startups on campuses. 
-            </p>
-            <p>
-              Recently, I worked at a mental health startup, Arrowz, revamping their backend ML implementation and launching a revenue model; at a local org delivering thousands of datasets to hundreds of parishes and schools; and at an ML startup in South Africa in collaboration with Western Sydney University implementing prototype unsupervised semantic segmentation models for sky observations.
-            </p>
-            <p>
-              In my research, I've continued to explore semantic segmentation models @ Vanderbilt's digital lab in collaboration with our archives, training few-shot semantic segmentation models on antique stereoscopic images for VR viewing. I'm fascinated by machine learning methods and low-level programming, and as artificial intelligence development ramps up and permeates every layer of our lives, it's increasingly important to understand the science-- both as an engineer and as a citizen.
-            </p>
-          </article>
-=======
             <div className="flex gap-3">
               <a
                 href="https://github.com/aetomack"
@@ -327,7 +257,6 @@ export default function Page() {
             <ChevronDown className="text-gray-600" size={22} />
           </motion.div>
         </section>
->>>>>>> 5d1877c (facelift)
 
         {/* Philosophy */}
         <section className="px-6 pb-16">
@@ -347,43 +276,6 @@ export default function Page() {
           </motion.div>
         </section>
 
-<<<<<<< HEAD
-          {/* Contact */}
-          <article id="contact">
-            <h2 className="major">Contact</h2>
-            <form method="POST" action="../send_email.php">
-              <div className="fields">
-                <div className="field half">
-                  <label htmlFor="name">Name</label>
-                  <input type="text" name="name" id="name" />
-                </div>
-                <div className="field half">
-                  <label htmlFor="email">Email</label>
-                  <input type="text" name="email" id="email" />
-                </div>
-                <div className="field">
-                  <label htmlFor="message">Message</label>
-                  <textarea name="message" id="message" rows={4}></textarea>
-                </div>
-              </div>
-              <ul className="actions">
-                <li>
-                  <input type="submit" value="Send Message" className="primary" />
-                </li>
-                <li>
-                  <input type="reset" value="Reset" />
-                </li>
-              </ul>
-            </form>
-            <ul className="icons">
-              <li>
-                <a 
-                  href = "https://www.linkedin.com/in/alex-tomack/"
-                  className = "fa-square-linkedin" 
-                  aria-hidden = "true"
-                  target = "_blank"
-                  rel = "noreferrer"
-=======
         {/* Work */}
         <section id="work" className="scroll-mt-16 py-20 px-6">
           <div className="max-w-5xl mx-auto">
@@ -407,7 +299,6 @@ export default function Page() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
->>>>>>> 5d1877c (facelift)
                 >
                   <GlassCard className="h-full flex flex-col gap-3 hover:bg-white/10 transition-colors duration-300">
                     <div>
