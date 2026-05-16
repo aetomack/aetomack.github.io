@@ -401,9 +401,9 @@ export default function Page() {
                       and converted it into prototype features and eventual implementation. 
                   </p>
                   <p>
-                    Ambiguity is where I thrive-- taking requirements and generating tangible results from vague expectations is a norm.
-                    My personal passion project has been the invention of mine and a good MBA friend, with the express purpose of assisting current students to build better.
-                    Motivated by our personal experience seeking the startup community at Vandy, we felt a need and immediately decided to execute on it-- pithing at the Hult Competition and connecting with Nashville-based angels.
+                    Ambiguity is where I thrive-- taking vague requirements and generating tangible results is a norm.
+                    My passion project lately is a collaboration between me and Vandy MBA Mengyang He, with the express purpose of enriching Vanderbilt's startup ecosystem.
+                    Motivated by our personal experience seeking the startup community at Vandy, we felt a gap and swiftly executed on it-- pithing at the Hult Competition and connecting with Nashville-based angels.
                   </p>
                   <p>
                     Feel free to connect with me wherever, I'd love to chat about anything! You can find my LinkedIn and email here.
