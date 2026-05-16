@@ -52,6 +52,14 @@ const skills = [
 
 const work = [
   {
+    company: "Lynx",
+    role: "Co-Founder | Tech Lead",
+    type: "Startup | Social Network",
+    description:
+      "Helping Vanderbilt students find their co-founders, connect to angels, and build.",
+    tags: ["JavaScript", "Convex", "Security", "Data-Intensive Applications", "AI", "Product Management", "Leadership", "Relationship Management"],
+  },
+  {
     company: "Arrowz",
     role: "Software Engineer",
     type: "Mental Health Startup",
@@ -270,7 +278,7 @@ export default function Page() {
           >
             <GlassCard className="text-center">
               <p className="text-gray-300 italic text-lg">
-                Ivy-Plus Technical Experience + Michelin Key-Winning Service + Artist Talent
+                Ivy-Plus Technical Experience + Michelin Key-Winning Service + Artistic Talent
               </p>
             </GlassCard>
           </motion.div>
@@ -388,25 +396,18 @@ export default function Page() {
                   </div>
                   <div className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
-                      I'm a software engineer with a strong belief that writing
-                      good code starts with understanding why it's written. I'm
-                      driven by clarity of purpose — informed by the bigger
-                      picture of what we're building, who it serves, and how
-                      each line of code contributes to that mission.
-                    </p>
-                    <p className="text-gray-300 leading-relaxed">
-                      I'm fascinated by machine learning methods and low-level
-                      programming. As AI permeates every layer of our lives,
-                      understanding the science matters — both as an engineer
-                      and as a citizen.
-                    </p>
-                    <p className="text-gray-300 leading-relaxed">
-                      Beyond engineering, I'm an avid musician, actor, painter,
-                      and photographer. I've performed on stage for the past
-                      decade in plays and musicals, starred in student films,
-                      and my photography has been displayed at Vanderbilt's expo
-                      for the arts in Chicago.
-                    </p>
+                      I'm a software engineer who sits at an invaluable intersection of engineering, world-class customer service, and product vision.
+                      I've worked on multiple startup teams, either at YC-backed companies, friends' ventures, or personal startups, where I've taken user feedback
+                      and converted it into prototype features and eventual implementation. 
+                  </p>
+                  <p>
+                    Ambiguity is where I thrive-- taking requirements and generating tangible results from vague expectations is a norm.
+                    My personal passion project has been the invention of mine and a good MBA friend, with the express purpose of assisting current students to build better.
+                    Motivated by our personal experience seeking the startup community at Vandy, we felt a need and immediately decided to execute on it-- pithing at the Hult Competition and connecting with Nashville-based angels.
+                  </p>
+                  <p>
+                    Feel free to connect with me wherever, I'd love to chat about anything! You can find my LinkedIn and email here.
+                  </p>
                   </div>
                 </div>
               </GlassCard>
