@@ -270,7 +270,7 @@ export default function Page() {
           >
             <GlassCard className="text-center">
               <p className="text-gray-300 italic text-lg">
-                "Good code, for good people, for good purpose."
+                Ivy-Plus Technical Experience + Michelin Key-Winning Service + Artist Talent
               </p>
             </GlassCard>
           </motion.div>
