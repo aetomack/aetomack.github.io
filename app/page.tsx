@@ -58,6 +58,7 @@ const work = [
     description:
       "Helping Vanderbilt students find their co-founders, connect to angels, and build.",
     tags: ["JavaScript", "Convex", "Security", "Data-Intensive Applications", "AI", "Product Management", "Leadership", "Relationship Management"],
+    image: "/images/pic01.jpg",
   },
   {
     company: "Arrowz",
@@ -66,6 +67,7 @@ const work = [
     description:
       "Revamped backend ML implementation and launched a revenue model for an accessible mental health platform.",
     tags: ["Python", "ML", "Backend", "Revenue"],
+    image: "/images/pic02.jpg",
   },
   {
     company: "Nonprofit Data Initiative",
@@ -74,6 +76,7 @@ const work = [
     description:
       "Delivered thousands of datasets to hundreds of parishes and schools, improving data accessibility for educational institutions across the region.",
     tags: ["Data Engineering", "ETL", "SQL", "Analytics"],
+    image: "/images/pic03.jpg",
   },
   {
     company: "Sky Observation ML",
@@ -82,6 +85,7 @@ const work = [
     description:
       "Implemented prototype unsupervised semantic segmentation models for astronomical sky observation data in collaboration with WSU researchers.",
     tags: ["PyTorch", "Semantic Segmentation", "Research", "Computer Vision"],
+    image: "/images/pic01.jpg",
   },
   {
     company: "Vanderbilt Digital Lab",
@@ -90,6 +94,7 @@ const work = [
     description:
       "Trained few-shot semantic segmentation models on antique stereoscopic images from university archives, enabling VR-based historical viewing experiences.",
     tags: ["Few-Shot Learning", "PyTorch", "VR", "Archival Research"],
+    image: "/images/pic02.jpg",
   },
 ];
 
@@ -307,31 +312,43 @@ export default function Page() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="h-full"
                 >
-                  <GlassCard className="h-full flex flex-col gap-3 hover:bg-white/10 transition-colors duration-300">
-                    <div>
-                      <p className="text-xs text-indigo-400 font-medium uppercase tracking-wider mb-1">
-                        {exp.type}
+                  <div className="exp-card-wrap h-full">
+                    <div className="absolute inset-0">
+                      <Image
+                        src={exp.image}
+                        alt=""
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/50" />
+                    </div>
+                    <div className="exp-card-glass bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 h-full flex flex-col gap-3">
+                      <div>
+                        <p className="text-xs text-indigo-400 font-medium uppercase tracking-wider mb-1">
+                          {exp.type}
+                        </p>
+                        <h3 className="text-base font-semibold text-white">
+                          {exp.company}
+                        </h3>
+                        <p className="text-sm text-gray-500">{exp.role}</p>
+                      </div>
+                      <p className="text-sm text-gray-300 leading-relaxed flex-1">
+                        {exp.description}
                       </p>
-                      <h3 className="text-base font-semibold text-white">
-                        {exp.company}
-                      </h3>
-                      <p className="text-sm text-gray-500">{exp.role}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {exp.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-0.5 text-xs bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 rounded-md"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <p className="text-sm text-gray-300 leading-relaxed flex-1">
-                      {exp.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {exp.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-0.5 text-xs bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 rounded-md"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </GlassCard>
+                  </div>
                 </motion.div>
               ))}
             </div>

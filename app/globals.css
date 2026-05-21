@@ -32,3 +32,18 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.22);
 }
+
+.exp-card-wrap {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.exp-card-glass {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: clip-path 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.exp-card-wrap:hover .exp-card-glass {
+  clip-path: polygon(0% 0%, 58% 0%, 100% 42%, 100% 100%, 0% 100%);
+}
