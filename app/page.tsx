@@ -278,7 +278,7 @@ export default function Page() {
           >
             <GlassCard className="text-center">
               <p className="text-gray-300 italic text-lg">
-                Ivy-Plus Technical Experience + Michelin Key-Winning Service + Artistic Talent
+                Founder | Engineer | Product Manager. <br/>I thrive at the intersection of engineering, customer obsession, and product vision. I love building things people want, and I'm always eager to connect and chat about anything!
               </p>
             </GlassCard>
           </motion.div>
