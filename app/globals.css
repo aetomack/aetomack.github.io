@@ -30,10 +30,21 @@
   }
 }
 
+:root[data-theme="dark"] {
+  --background: var(--color-espresso);
+  --foreground: var(--color-cream);
+}
+
+:root[data-theme="light"] {
+  --background: var(--color-cream);
+  --foreground: var(--color-espresso);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 500ms ease, color 500ms ease;
 }
 
 @keyframes door-knock {
@@ -46,5 +57,22 @@ body {
   }
   60% {
     transform: translateX(3px) scale(0.995);
+  }
+}
+
+@keyframes note-float {
+  0% {
+    transform: translate(0, 0) rotate(-6deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  75% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(18px, -72px) rotate(10deg);
+    opacity: 0;
   }
 }
