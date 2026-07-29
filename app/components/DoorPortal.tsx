@@ -164,6 +164,7 @@ export default function DoorPortal() {
             margin: "0 auto",
             filter: dark ? "drop-shadow(0 0 12px rgba(201,162,90,0.6))" : "none",
             transition: "filter 400ms ease 400ms",
+            transform: "scaleY(-1)",
           }}
         >
           <path d="M9 18h6" />
@@ -174,7 +175,7 @@ export default function DoorPortal() {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-[130px]"
+        className="pointer-events-none absolute left-1/2 top-[158px]"
         style={{
           transform: "translateX(-50%)",
           width: "min(90vw, 640px)",
@@ -244,7 +245,7 @@ export default function DoorPortal() {
                 stroke="var(--foreground)"
                 strokeWidth="1.5"
                 pathLength={100}
-                strokeDasharray={100}
+                strokeDasharray="100 100"
                 strokeDashoffset={outlineVisible ? 0 : 100}
                 style={{ transition: "stroke-dashoffset 1050ms cubic-bezier(0.65,0,0.35,1)" }}
               />
@@ -258,7 +259,7 @@ export default function DoorPortal() {
                 stroke="var(--foreground)"
                 strokeWidth="1"
                 pathLength={100}
-                strokeDasharray={100}
+                strokeDasharray="100 100"
                 strokeDashoffset={outlineVisible ? 0 : 100}
                 style={{ transition: "stroke-dashoffset 1050ms cubic-bezier(0.65,0,0.35,1) 130ms" }}
               />
@@ -270,7 +271,7 @@ export default function DoorPortal() {
                 stroke={accentStroke}
                 strokeWidth="1.5"
                 pathLength={100}
-                strokeDasharray={100}
+                strokeDasharray="100 100"
                 strokeDashoffset={outlineVisible ? 0 : 100}
                 style={{ transition: "stroke-dashoffset 850ms cubic-bezier(0.65,0,0.35,1) 300ms" }}
               />
@@ -303,7 +304,7 @@ export default function DoorPortal() {
             className="font-sans text-sm font-light tracking-[0.3em] text-foreground/40 uppercase transition-all duration-500 group-hover:text-foreground/80"
             style={{ opacity: phase === "idle" ? 1 : 0, transitionDuration: "400ms" }}
           >
-            Enter
+            Where am I?
           </span>
         </button>
 
