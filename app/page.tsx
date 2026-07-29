@@ -1,11 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DoorPortal from "@/app/components/DoorPortal";
 import RoomScene from "@/app/components/RoomScene";
 
 export default function Home() {
   const [entered, setEntered] = useState(false);
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+  }, [dark]);
+
+  const toggleTheme = () => setDark((d) => !d);
 
   return (
     <div className="relative flex-1 min-h-full">
@@ -17,7 +24,12 @@ export default function Home() {
           transition: "opacity 600ms ease",
         }}
       >
-        <DoorPortal onEnter={() => setEntered(true)} />
+        <DoorPortal
+          onEnter={() => setEntered(true)}
+          active={!entered}
+          dark={dark}
+          onToggleTheme={toggleTheme}
+        />
       </div>
       <div
         className="absolute inset-0 flex flex-col"
@@ -27,7 +39,12 @@ export default function Home() {
           transition: "opacity 600ms ease 400ms",
         }}
       >
-        <RoomScene visible={entered} />
+        <RoomScene
+          visible={entered}
+          dark={dark}
+          onToggleTheme={toggleTheme}
+          onExit={() => setEntered(false)}
+        />
       </div>
     </div>
   );
