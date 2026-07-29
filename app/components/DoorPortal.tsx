@@ -2,14 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type Phase = "idle" | "tracing" | "greeting" | "knocking";
+type Phase = "idle" | "tracing" | "greeting" | "knocking" | "identifying" | "scared";
 
 const TRACE_MS = 1200;
 const REDUCED_SCALE = 0.15;
 const GREETING_INTERVAL_MS = 1900;
 const GREETING_FADE_MS = 220;
 const KNOCK_BEAT_MS = 900;
-const KNOCK_REPLY_MS = 1300;
+const SCARED_MS = 1800;
 
 const GREETINGS = [
   "Hello!",
@@ -35,12 +35,12 @@ function sleep(ms: number) {
   return new Promise<void>((resolve) => setTimeout(resolve, ms));
 }
 
-export default function DoorPortal() {
+export default function DoorPortal({ onEnter }: { onEnter?: () => void }) {
   const reducedMotionRef = useRef(false);
   const [phase, setPhase] = useState<Phase>("idle");
   const [greetingIndex, setGreetingIndex] = useState(0);
   const [greetingFade, setGreetingFade] = useState(true);
-  const [knockBeat, setKnockBeat] = useState<0 | 1 | 2>(0);
+  const [knockBeat, setKnockBeat] = useState<0 | 1>(0);
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
@@ -94,24 +94,36 @@ export default function DoorPortal() {
     setPhase("knocking");
     setKnockBeat(1);
     await sleep(KNOCK_BEAT_MS * scale);
-    setKnockBeat(2);
-    await sleep(KNOCK_REPLY_MS * scale);
-
     setKnockBeat(0);
+    setGreetingFade(true);
+    setPhase("identifying");
+  }
+
+  function handleFriend() {
+    if (phase !== "identifying") return;
+    onEnter?.();
+  }
+
+  async function handleWolf() {
+    if (phase !== "identifying") return;
+    const scale = reducedMotionRef.current ? REDUCED_SCALE : 1;
+
+    setPhase("scared");
+    await sleep(SCARED_MS * scale);
     setPhase("idle");
   }
 
-  const outlineVisible = phase !== "idle";
-  const bubbleVisible = phase === "greeting" || phase === "knocking";
+  const outlineVisible = phase !== "idle" && phase !== "scared";
+  const bubbleVisible = phase === "greeting" || phase === "knocking" || phase === "identifying" || phase === "scared";
   const optionsVisible = phase === "greeting";
+  const identifyVisible = phase === "identifying";
   const accentStroke = dark ? "var(--color-taupe)" : "var(--color-maroon)";
 
   const bubbleText =
-    phase === "knocking"
-      ? knockBeat === 1
-        ? "*knock knock*"
-        : "Nobody home... yet!"
-      : GREETINGS[greetingIndex];
+    phase === "knocking" ? "*knock knock*"
+    : phase === "identifying" ? "Who is it?"
+    : phase === "scared" ? "Ah!!"
+    : GREETINGS[greetingIndex];
 
   return (
     <div className="relative flex-1 bg-background overflow-hidden flex items-center justify-center px-6 transition-colors duration-500">
@@ -180,7 +192,7 @@ export default function DoorPortal() {
           transform: "translateX(-50%)",
           width: "min(90vw, 640px)",
           height: "min(58vh, 460px)",
-          clipPath: optionsVisible
+          clipPath: (optionsVisible || identifyVisible)
             ? "polygon(47% 0%, 53% 0%, 92% 100%, 20% 100%)"
             : "polygon(47% 0%, 53% 0%, 74% 100%, 26% 100%)",
           background:
@@ -251,32 +263,42 @@ export default function DoorPortal() {
                 strokeDashoffset={outlineVisible ? 0 : 100}
                 style={{ transition: "stroke-dashoffset 1050ms cubic-bezier(0.65,0,0.35,1)" }}
               />
-              <rect
-                x="24"
-                y="24"
-                width="112"
-                height="252"
-                rx="2"
-                fill="none"
-                stroke="var(--foreground)"
-                strokeWidth="1"
-                pathLength={100}
-                strokeDasharray="100 100"
-                strokeDashoffset={outlineVisible ? 0 : 100}
-                style={{ transition: "stroke-dashoffset 1050ms cubic-bezier(0.65,0,0.35,1) 130ms" }}
-              />
-              <circle
-                cx="112"
-                cy="150"
-                r="9"
-                fill="none"
-                stroke={accentStroke}
-                strokeWidth="1.5"
-                pathLength={100}
-                strokeDasharray="100 100"
-                strokeDashoffset={outlineVisible ? 0 : 100}
-                style={{ transition: "stroke-dashoffset 850ms cubic-bezier(0.65,0,0.35,1) 300ms" }}
-              />
+              {/* Door panel + knob — scaleX from left hinge to crack open */}
+              <g
+                style={{
+                  transform: identifyVisible ? "scaleX(0.72)" : "scaleX(1)",
+                  transformBox: "fill-box",
+                  transformOrigin: "left center",
+                  transition: "transform 700ms cubic-bezier(0.34,1.2,0.64,1)",
+                }}
+              >
+                <rect
+                  x="24"
+                  y="24"
+                  width="112"
+                  height="252"
+                  rx="2"
+                  fill="none"
+                  stroke="var(--foreground)"
+                  strokeWidth="1"
+                  pathLength={100}
+                  strokeDasharray="100 100"
+                  strokeDashoffset={outlineVisible ? 0 : 100}
+                  style={{ transition: "stroke-dashoffset 1050ms cubic-bezier(0.65,0,0.35,1) 130ms" }}
+                />
+                <circle
+                  cx="112"
+                  cy="150"
+                  r="9"
+                  fill="none"
+                  stroke={accentStroke}
+                  strokeWidth="1.5"
+                  pathLength={100}
+                  strokeDasharray="100 100"
+                  strokeDashoffset={outlineVisible ? 0 : 100}
+                  style={{ transition: "stroke-dashoffset 850ms cubic-bezier(0.65,0,0.35,1) 300ms" }}
+                />
+              </g>
             </svg>
 
             <div
@@ -311,6 +333,7 @@ export default function DoorPortal() {
         </button>
 
         <div className="absolute left-1/2 top-full mt-8 -translate-x-1/2 sm:left-full sm:top-1/2 sm:mt-0 sm:ml-10 sm:translate-x-0 sm:-translate-y-1/2">
+          {/* Greeting options: Knock / Nevermind */}
           <div
             className="flex flex-col items-center gap-3 sm:items-start"
             style={{
@@ -335,6 +358,34 @@ export default function DoorPortal() {
               className="font-sans text-sm font-light tracking-[0.2em] text-foreground/40 uppercase transition-colors duration-300 hover:text-foreground/70"
             >
               Nevermind
+            </button>
+          </div>
+
+          {/* Identify options: A friend / A big bad wolf */}
+          <div
+            className="absolute inset-0 flex flex-col items-center gap-3 sm:items-start"
+            style={{
+              opacity: identifyVisible ? 1 : 0,
+              transform: identifyVisible ? "translateY(0)" : "translateY(6px)",
+              transition: "opacity 420ms ease 150ms, transform 420ms ease 150ms",
+              pointerEvents: identifyVisible ? "auto" : "none",
+            }}
+          >
+            <button
+              type="button"
+              onClick={handleFriend}
+              disabled={!identifyVisible}
+              className="font-sans text-sm font-light tracking-[0.2em] text-foreground/70 uppercase transition-colors duration-300 hover:text-foreground"
+            >
+              A friend.
+            </button>
+            <button
+              type="button"
+              onClick={handleWolf}
+              disabled={!identifyVisible}
+              className="font-sans text-sm font-light tracking-[0.2em] text-foreground/40 uppercase transition-colors duration-300 hover:text-foreground/70"
+            >
+              A big, bad wolf.
             </button>
           </div>
         </div>
