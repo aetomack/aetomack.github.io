@@ -233,6 +233,8 @@ export default function DoorPortal() {
               style={{
                 animation:
                   phase === "knocking" && knockBeat === 1 ? "door-knock 300ms ease-in-out 2" : "none",
+                opacity: outlineVisible ? 1 : 0,
+                transition: "opacity 850ms ease",
               }}
             >
               <rect
