@@ -9,11 +9,13 @@
 
   --background: var(--color-cream);
   --foreground: var(--color-espresso);
+  --accent: var(--color-maroon);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
   --color-cream: var(--color-cream);
   --color-taupe: var(--color-taupe);
   --color-clay: var(--color-clay);
@@ -27,17 +29,20 @@
   :root {
     --background: var(--color-espresso);
     --foreground: var(--color-cream);
+    --accent: var(--color-clay);
   }
 }
 
 :root[data-theme="dark"] {
   --background: var(--color-espresso);
   --foreground: var(--color-cream);
+  --accent: var(--color-clay);
 }
 
 :root[data-theme="light"] {
   --background: var(--color-cream);
   --foreground: var(--color-espresso);
+  --accent: var(--color-maroon);
 }
 
 body {
@@ -45,6 +50,56 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   transition: background-color 500ms ease, color 500ms ease;
+}
+
+/* Clickable objects in the room — outline picks up the accent on hover / keyboard focus. */
+.hotspot {
+  cursor: pointer;
+  outline: none;
+  stroke: var(--foreground);
+  color: var(--foreground);
+  transition: stroke 250ms ease, color 250ms ease;
+}
+
+.hotspot:hover,
+.hotspot:focus-visible {
+  stroke: var(--accent);
+  color: var(--accent);
+}
+
+/* Portrait on the easel — a faded study until you look at it, then it paints in. */
+.easel-portrait {
+  opacity: 0.6;
+  filter: grayscale(1) sepia(0.25) contrast(0.9);
+  transition: opacity 900ms ease, filter 700ms ease;
+}
+
+.hotspot:hover .easel-portrait,
+.hotspot:focus-visible .easel-portrait {
+  opacity: 1;
+  filter: none;
+}
+
+/* Camera's REC light — slow blink, steady for reduced motion. */
+.rec-light {
+  animation: rec-blink 1.6s steps(1, end) infinite;
+}
+
+@keyframes rec-blink {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rec-light {
+    animation: none;
+  }
 }
 
 @keyframes door-knock {

@@ -1,6 +1,22 @@
 "use client";
 
+import { useCallback, useRef, useState } from "react";
 import BulbIcon from "@/app/components/BulbIcon";
+import InfoPanel from "@/app/components/InfoPanel";
+import { ROOM_ITEMS, type RoomItemId } from "@/app/components/roomContent";
+import { draw } from "@/app/components/roomGeometry";
+import {
+  Camera,
+  ClothingRack,
+  Corkboard,
+  Easel,
+  Guitar,
+  Laptop,
+  MovingBox,
+  Playbill,
+  Whiteboard,
+  type HotspotProps,
+} from "@/app/components/RoomObjects";
 
 // Perspective room geometry (viewBox 800×600)
 // Back wall corners: TL(260,150) TR(540,150) BR(540,450) BL(260,450)
@@ -20,20 +36,39 @@ export default function RoomScene({
   onToggleTheme: () => void;
   onExit: () => void;
 }) {
-  const anim = (delay: number) => ({
-    pathLength: 100 as const,
-    strokeDasharray: "100 100",
-    strokeDashoffset: visible ? 0 : 100,
-    style: {
-      transition: `stroke-dashoffset 700ms cubic-bezier(0.65,0,0.35,1) ${delay}ms`,
-    },
-  });
+  const anim = (delay: number) => draw(visible, delay);
+
+  const [hovered, setHovered] = useState<RoomItemId | null>(null);
+  const [selected, setSelected] = useState<RoomItemId | null>(null);
+  const triggerRef = useRef<HTMLElement | SVGElement | null>(null);
+
+  const select = useCallback((id: RoomItemId) => {
+    triggerRef.current = document.activeElement as HTMLElement | SVGElement | null;
+    setSelected(id);
+  }, []);
+
+  const closePanel = useCallback(() => {
+    setSelected(null);
+    triggerRef.current?.focus();
+  }, []);
+
+  const exit = () => {
+    setSelected(null);
+    setHovered(null);
+    onExit();
+  };
+
+  const hotspot: HotspotProps = { visible, onSelect: select, onHover: setHovered };
+  const status = hovered ? `Look at ${ROOM_ITEMS[hovered].label}` : "Look around. I'm still unpacking.";
 
   return (
-    <div className="relative flex-1 bg-background overflow-hidden transition-colors duration-500">
+    <div
+      className="relative flex-1 bg-background overflow-hidden transition-colors duration-500"
+      style={{ containerType: "size" }}
+    >
       <button
         type="button"
-        onClick={onExit}
+        onClick={exit}
         aria-label="Back to home"
         className="absolute left-5 top-5 z-20 flex h-9 items-center gap-1.5 rounded-full px-3 font-sans text-sm font-light tracking-wide text-foreground/60 transition-colors hover:bg-foreground/10 hover:text-foreground focus:outline-none"
         style={{
@@ -121,13 +156,19 @@ export default function RoomScene({
         <line x1="540" y1="450" x2="800" y2="600" strokeWidth="1" {...anim(450)} />
         <line x1="260" y1="450" x2="0"   y2="600" strokeWidth="1" {...anim(500)} />
 
+        <Whiteboard {...hotspot} />
+        <Corkboard {...hotspot} />
+        <Playbill {...hotspot} />
+
         {/* ── Box 1 (left side, near back-left) ── */}
-        {/* Front face */}
-        <path d="M 275 472 L 320 472 L 320 430 L 275 430 Z" strokeWidth="1" {...anim(850)} />
-        {/* Top face — offset (+12, −16) toward VP */}
-        <path d="M 275 430 L 320 430 L 332 414 L 287 414 Z" strokeWidth="1" {...anim(920)} />
-        {/* Right side face */}
-        <path d="M 320 430 L 320 472 L 332 456 L 332 414 Z" strokeWidth="1" {...anim(920)} />
+        <MovingBox {...hotspot}>
+          {/* Front face */}
+          <path d="M 275 472 L 320 472 L 320 430 L 275 430 Z" strokeWidth="1" {...anim(850)} />
+          {/* Top face — offset (+12, −16) toward VP */}
+          <path d="M 275 430 L 320 430 L 332 414 L 287 414 Z" strokeWidth="1" {...anim(920)} />
+          {/* Right side face */}
+          <path d="M 320 430 L 320 472 L 332 456 L 332 414 Z" strokeWidth="1" {...anim(920)} />
+        </MovingBox>
 
         {/* ── Box 2 (right side) ── */}
         {/* Front face */}
@@ -136,7 +177,15 @@ export default function RoomScene({
         <path d="M 450 420 L 512 420 L 499 405 L 437 405 Z" strokeWidth="1" {...anim(1020)} />
         {/* Left side face */}
         <path d="M 450 420 L 450 474 L 437 459 L 437 405 Z" strokeWidth="1" {...anim(1020)} />
+
+        <Laptop {...hotspot} />
       </svg>
+
+      {/* Free-standing props, back to front so nearer ones overlap farther ones */}
+      <Guitar {...hotspot} />
+      <Easel {...hotspot} />
+      <Camera {...hotspot} />
+      <ClothingRack {...hotspot} />
 
       {/* Light cone — glows over the back wall when dark; drawn after the svg so it renders on top of the shapes */}
       <div
@@ -153,20 +202,48 @@ export default function RoomScene({
           transition: `opacity 500ms ease ${dark ? "550ms" : "0ms"}`,
         }}
       />
-
-      {/* Message — centered on the back wall */}
-      <div
-        className="pointer-events-none absolute inset-0 flex items-center justify-center"
+      {/* START Testing Resolution */}
+      <svg viewBox="0 0 400 100"
+        preserveAspectRatio="none"
+        className="pointer-events-none absolute inset-0 w-full h-full"
+        fill="none"
+        stroke="var(--foreground)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         style={{
           opacity: visible ? 1 : 0,
-          transition: "opacity 900ms ease 1600ms",
+          transition: "opacity 850ms ease",
         }}
       >
-        <p className="font-sans text-xs font-light tracking-[0.18em] text-foreground/35 text-center leading-loose uppercase">
-          I&apos;m still moving in.<br />
-          It&apos;ll be more decorated later.
+        {/* Testing Resolution */}
+        <rect
+          x="260" y="150" width="280" height="300"
+          strokeWidth="1.3"
+          pathLength={100}
+          strokeDasharray="100 100"
+          strokeDashoffset={visible ? 0 : 100}
+          style={{ transition: "stroke-dashoffset 1000ms cubic-bezier(0.65,0,0.35,1)" }}
+        />
+      </svg>
+      {/* END Testing Resolution */}
+
+      {/* Status line — point-and-click style "Look at …" */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-5 flex justify-center px-6"
+        style={{
+          opacity: visible ? 1 : 0,
+          transition: `opacity 600ms ease ${visible ? "1800ms" : "0ms"}`,
+        }}
+      >
+        <p
+          className="rounded-full bg-background/80 px-3 py-1 font-sans text-xs font-light tracking-[0.18em] text-foreground/45 text-center uppercase"
+          style={{ opacity: selected ? 0 : 1, transition: "opacity 300ms ease" }}
+        >
+          {status}
         </p>
       </div>
+
+      <InfoPanel open={visible ? selected : null} onClose={closePanel} />
     </div>
   );
 }
