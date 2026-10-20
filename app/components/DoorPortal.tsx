@@ -140,7 +140,8 @@ export default function DoorPortal({
     : GREETINGS[greetingIndex];
 
   return (
-    <div className="relative flex-1 bg-background overflow-hidden flex items-center justify-center px-6 transition-colors duration-500">
+    // On short screens, push the door down so the bulb and speech bubble above it stay in frame.
+    <div className="relative flex-1 bg-background overflow-hidden flex items-center justify-center px-6 transition-colors duration-500 [@media(max-height:640px)]:pt-28">
       <button
         type="button"
         onClick={onToggleTheme}
@@ -159,23 +160,6 @@ export default function DoorPortal({
         />
       </button>
 
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-[158px]"
-        style={{
-          transform: "translateX(-50%)",
-          width: "min(90vw, 640px)",
-          height: "min(58vh, 460px)",
-          clipPath: (optionsVisible || identifyVisible)
-            ? "polygon(47% 0%, 53% 0%, 92% 100%, 20% 100%)"
-            : "polygon(47% 0%, 53% 0%, 74% 100%, 26% 100%)",
-          background:
-            "linear-gradient(to bottom, rgba(201,162,90,0.30), rgba(201,162,90,0.08) 55%, rgba(201,162,90,0) 85%)",
-          opacity: dark ? 1 : 0,
-          transition: `opacity 500ms ease ${dark ? "550ms" : "0ms"}, clip-path 500ms ease`,
-        }}
-      />
-
       <div className="relative flex flex-col items-center gap-6">
         {/* Bulb + speech bubble — stacked in one column above the door so they never overlap */}
         <div
@@ -183,13 +167,35 @@ export default function DoorPortal({
           className="pointer-events-none absolute left-1/2 flex flex-col items-center"
           style={{ bottom: "calc(100% + 14px)", transform: "translateX(-50%)" }}
         >
+          {/* Lifted a full viewport height when off so it clears the top of any screen */}
           <div
+            className="relative"
             style={{
-              transform: `translateY(${dark ? "0%" : "-130%"})`,
+              transform: `translateY(${dark ? "0" : "-100vh"})`,
               transition: "transform 700ms cubic-bezier(0.34,1.2,0.64,1)",
             }}
           >
-            <div className="mx-auto" style={{ width: 1, height: 120, background: "var(--foreground)", opacity: 0.4 }} />
+            {/* Cord runs up past the top edge, so it always reads as hanging from the ceiling */}
+            <div
+              className="absolute bottom-full left-1/2"
+              style={{ width: 1, height: "100vh", background: "var(--foreground)", opacity: 0.4 }}
+            />
+            {/* Light cone — anchored to the bulb so it lines up at every viewport size */}
+            <div
+              className="absolute left-1/2 top-full"
+              style={{
+                transform: "translateX(-50%)",
+                width: "min(90vw, 640px)",
+                height: "calc(min(52vh, 420px) + 110px)",
+                clipPath: (optionsVisible || identifyVisible)
+                  ? "polygon(47% 0%, 53% 0%, 92% 100%, 20% 100%)"
+                  : "polygon(47% 0%, 53% 0%, 74% 100%, 26% 100%)",
+                background:
+                  "linear-gradient(to bottom, rgba(201,162,90,0.30), rgba(201,162,90,0.08) 55%, rgba(201,162,90,0) 85%)",
+                opacity: dark ? 1 : 0,
+                transition: `opacity 500ms ease ${dark ? "550ms" : "0ms"}, clip-path 500ms ease`,
+              }}
+            />
             <BulbIcon
               width={44}
               height={44}

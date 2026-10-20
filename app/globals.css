@@ -131,3 +131,12 @@ body {
     opacity: 0;
   }
 }
+
+/* The room stage pans by swipe / trackpad / wheel — no visible scrollbar. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
